@@ -1,0 +1,107 @@
+
+html {
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	padding: 50px 0 0 50px; /*remove this padding no need for production*/	
+}
+
+.main{
+	width: 320px;
+    height: 100px;
+	cursor: pointer;
+	box-shadow: 0px 0px 2px 0px rgba(75, 93, 104, 0.25);
+}
+.container {
+	width: 320px;
+    height: 100px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.banner__content{
+	display: flex;
+	align-items: center;
+}
+
+.banner__img {
+	background-image: url(../images/main__img.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 146px;
+    height: 100px;
+    z-index: 5; 
+}
+
+.banner__text {
+	overflow: hidden;
+	width: 103px;
+	height: 70px;
+	background-color: #fff;	
+	font-size: 14px;
+	line-height: 17px;
+	font-weight: 700;
+	color: #343434;
+	padding:10px;
+	align-items: center;
+	display: flex;
+	animation-name: slideInRight;
+    animation-duration: 1.5s; 	
+}
+
+.banner__btn {
+	outline: none;
+	border: none;
+	width: 42px;
+	height: 42px;
+	border-radius: 50px;
+	background-color: #F76B00;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: flex;	
+	cursor: pointer;
+	animation-name: rollIn;
+    animation-duration: 1.5s;
+    margin-left: 4px;
+    z-index: 4; 
+}
+
+
+/*-------Animations-----*/
+
+
+/*-------text animation-----*/
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/*-------button animation-----*/
+
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
